@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/nyc.png");
+    background-size: cover;
+    animation: moveNYC 40s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: 'Ubuntu';
+}
+
+@keyframes moveNYC {
+    from { background-position: bottom;}
+    to {background-position: top;}
+}
+
+/* -------------------------------------- Setup ------------------------------ */
+
+.closingAnimation {
+    transform: scale(0)!important;
+    transition: transform 1s;
+}
+
+.openingAnimation {
+    transform: scale(1)!important;
+    transition: transform 1s;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+} 
+
+::-webkit-scrollbar-track { 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C4C4C4; 
+    border-radius: 5px;
+  }
+
+/* ---------------------------------- Pop-Up ------------------------------------ */
+.mainPopup {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    border: #C4C4C4 solid 4px;
+    background-color: #FFFFFF;
+}
+
+.popupHead {
+    display: grid;
+    grid-template-columns: 40px 2fr 50px;
+    height: 40px;
+    align-items: center;
+    background-color: #004BBC;
+    border-bottom: #C4C4C4 solid 4px;
+}
+
+.notebook {
+    width: 26px;
+    height: 26px;
+    margin-left: 5px;
+}
+
+.popupHead div {
+    color: #C4C4C4;
+}
+
+.close {
+    width: 28px;
+    height: 28px;
+    margin: auto 5px auto auto;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.close:visited {
+}
+
+.close:link{
+}
+
+.close:active {
+}
+
+.popupBody {
+    display:flex;
+    flex-direction: column;
+    height: calc(100% - 44px);
+}
+
+/* -------------------------------------- Start Page ------------------------------- */
+.start {
+    width: 150px;
+    height: 20px;
+    color: #C4C4C4;
+    text-align: center;
+    padding: 15px;
+    border: #C4C4C4 solid 4px;
+    background-color: #004BBC;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --------------------------------- Home Page ------------------------------------ */
+
+.homelist {
+    color: #C4C4C4;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.homelist:hover {
+    color: #004BBC;
+}
+
+/* --------------------------------- ReadMe Page ------------------------------------ */
+
+.readText {
+    color: #C4C4C4;
+    margin: 5px;
+    padding: 5px;
+    overflow: scroll;
+    height: 100%;
+}
+
+/* --------------------------------- Music Page ------------------------------------ */
+
+.musicFile {
+    display: flex;
+    width: 170px;
+    height: 230px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.musicFile:hover {
+    background: #004BBC;
+}
+
+.fileIMG {
+    width: 160px;
+    height: 160px;
+    background-image: url("../img/folderC.png");
+    position: relative;
+}
+
+.brandIMG {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: 44px;
+    left: 37px;
+}
+
+.musicBrand {
+    font-size: 30px;
+    color: #C4C4C4;
+}
+
+/* --------------------------------- Music Strain Page ------------------------------------ */
+
+.fileImgO {
+    width: 160px;
+    height: 160px;
+    background-image: url("../img/folderO.png");
+    background-size: 110% 110%;
+    background-position: 10% 10%;
+    position: relative;
+}
+
+/* --------------------------------- Music Genre Page ------------------------------------ */
+
+.song {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-around;
+    color: #C4C4C4;
+    width: 100%;
+}
+
+/* --------------------------------- Other ------------------------------------ */
+
+@media (min-width: 960px) {
+    .popupBody {
+        display:flex;
+        flex-direction: row;
+        height: calc(100% - 44px);
+    }
+}
+
+main > p {
+    
+}
