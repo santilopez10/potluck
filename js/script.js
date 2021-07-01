@@ -12,7 +12,7 @@ $(document).ready(function() {
 async function pageChange(page) {
     $('#main').addClass('closingAnimation');
     $('#main').removeClass("openingAnimation");
-    await sleep(1500);
+    await sleep(1000);
 
     switch(page) {
         case 0: $('#main').load("components/start.html");
