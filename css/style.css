@@ -30,12 +30,12 @@ body {
 
 .closingAnimation {
     transform: scale(0)!important;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
 .openingAnimation {
     transform: scale(1)!important;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
 #main {
